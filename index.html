@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유튜브 클론코딩</title>
     <script src="https://kit.fontawesome.com/af405692ac.js" crossorigin="anonymous"></script>
+    <script src="./js/youtube.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -23,85 +24,93 @@
 
     <!-- video section -->
     <section class="video">
-        <video controls autoplay src="https://youtu.be/fE2h3lGlOsk.ogg" type="video/ogg">
-        </video>
+        <!-- <video></video> -->
+        <iframe width="100%" src="https://www.youtube.com/embed/fE2h3lGlOsk" title="ITZY(있지) 'WANNABE' M/V" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <!-- video info -->
-    <section class="info">
-        <div class="information">
-            <ul class="hashtags">
-                <li>ITZY</li>
-                <li>ITzME</li>
-                <li>WANNABE</li>
+    <div class="infoAndNext">
+        <!-- video info -->
+        <section class="info">
+            <div class="information">
+                <ul class="hashtags">
+                    <li>ITZY</li>
+                    <li>ITzME</li>
+                    <li>WANNABE</li>
+                </ul>
+                <div class="titleBtn">
+                    <span class="title">ITZY(있지) "WANNABE" M/V</span>
+                    <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <span class="viewsAndDay">조회수 255,899,304회 • 2020. 3. 9</span>
+            </div>
+            <ul class="btns">
+                <li>
+                    <button><i class="fas fa-thumbs-up thumbs" onclick="thumbsUpDown()"></i>1K</button>
+                </li>
+                <li>
+                    <button><i class="fas fa-thumbs-down fas-thumbs"></i>0</button>
+                </li>
+                <li>
+                    <button><i class="fas fa-share"></i>Share</button>
+                </li>
+                <li>
+                    <button><i class="fas fa-plus"></i>Save</button>
+                </li>
+                <li>
+                    <button><i class="fas fa-flag"></i>Report</button>
+                </li>
+            </ul> 
+            <div class="channel">
+                <div class="channel_data">
+                    <img src="./images/jypEnt.png" alt="채널 프로필사진" />
+                    <div class="channel_info">
+                        <span class="name">JYP Entertainment</span>
+                        <span class="subscribers">19.7M</span>
+                    </div>
+                </div>
+                <button class="subscribe">SUBSCRIBE</button>
+            </div>
+        </section>
+
+        <!-- next video list -->
+        <section class="nextVid">
+            <p>Up Next</p>
+            <ul>
+                <li class="next">
+                    <div class="img">
+                        <img src="./images/itzy.jpg" alt="다음 동영상" />
+                    </div>
+                    <div class="listInfo">
+                        <span class="listTitle">ITZY(있지) "WANNABE" M/V</span>
+                        <span class="listName">JYP Entertainment</span>
+                        <span class="views">19.7M views</span>
+                    </div>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="next">
+                    <div class="img">
+                        <img src="./images/itzy.jpg" alt="다음 동영상" />
+                    </div>
+                    <div class="listInfo">
+                        <span class="listTitle">ITZY(있지) "WANNABE" M/V</span>
+                        <span class="listName">JYP Entertainment</span>
+                        <span class="views">19.7M views</span>
+                    </div>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="next">
+                    <div class="img">
+                        <img src="./images/itzy.jpg" alt="다음 동영상" />
+                    </div>
+                    <div class="listInfo">
+                        <span class="listTitle">ITZY(있지) "WANNABE" M/V</span>
+                        <span class="listName">JYP Entertainment</span>
+                        <span class="views">19.7M views</span>
+                    </div>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </li>
             </ul>
-            <div class="titleBtn">
-                <span class="title">ITZY(있지) "WANNABE" M/V</span>
-                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
-            </div>
-            <span class="viewsAndDay">조회수 255,899,304회 • 2020. 3. 9</span>
-        </div>
-        <ul class="btns">
-            <li>
-                <button><i class="fas fa-thumbs-up"></i>1K</button>
-            </li>
-            <li>
-                <button><i class="fas fa-thumbs-down"></i>0</button>
-            </li>
-            <li>
-                <button><i class="fas fa-share"></i>Share</button>
-            </li>
-            <li>
-                <button><i class="fas fa-plus"></i>Save</button>
-            </li>
-            <li>
-                <button><i class="fas fa-flag"></i>Report</button>
-            </li>
-        </ul> 
-        <div class="channel">
-            <div class="channel_data">
-                <img src="./images/jypEnt.png" alt="채널 프로필사진" />
-                <div class="channel_info">
-                    <span class="name">JYP Entertainment</span>
-                    <span class="subscribers">19.7M</span>
-                </div>
-            </div>
-            <button class="subscribe">SUBSCRIBE</button>
-        </div>
-    </section>
-
-    <!-- next video list -->
-    <section class="nextVid">
-        <p>Up Next</p>
-        <ul>
-            <li class="nextVid">
-                <img src="./images/itzy.jpg" alt="다음 동영상" />
-                <div class="listInfo">
-                    <span class="listTitle">다음 영상 제목</span>
-                    <span class="listName">JYP Entertainment</span>
-                    <span class="views">19.7M views</span>
-                </div>
-                <button><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-            <li class="nextVid">
-                <img src="./images/itzy.jpg" alt="다음 동영상" />
-                <div class="listInfo">
-                    <span class="listTitle">다음 영상 제목</span>
-                    <span class="listName">JYP Entertainment</span>
-                    <span class="views">19.7M views</span>
-                </div>
-                <button><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-            <li class="nextVid">
-                <img src="./images/itzy.jpg" alt="다음 동영상" />
-                <div class="listInfo">
-                    <span class="listTitle">다음 영상 제목</span>
-                    <span class="listName">JYP Entertainment</span>
-                    <span class="views">19.7M views</span>
-                </div>
-                <button><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-        </ul>
-    </section>
+        </section>
+    </div>
 </body>
 </html>
