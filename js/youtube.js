@@ -1,3 +1,4 @@
+// 좋아요 클릭 시 색상 변경
 function thumbsUp() {
     var likeBtn = document.getElementById("thumbsUp").style.color;
     color = '';
@@ -13,7 +14,7 @@ function thumbsUp() {
         like.style.color = color;  
     }
 }
-
+// 싫어요 클릭시 색상 변경
 function thumbsDown() {
     var hateBtn = document.getElementById("thumbsDown").style.color;
     color = '';
@@ -27,12 +28,9 @@ function thumbsDown() {
         var like = document.getElementById("thumbsDown");
         color = '#2F27CD';
         like.style.color = color;
-        
     }
 }
-
-
-
+// 구독, 구독 취소시 구독버튼 변경
 function clickSubscribe() {
     var button = document.getElementById("subsBtn").style.color;
     color = '';
