@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fav/favicon.ico">
     <title>Youtube-clone</title>
     <script src="https://kit.fontawesome.com/af405692ac.js" crossorigin="anonymous"></script>
     <script src="./js/youtube.js"></script>
@@ -24,31 +25,30 @@
 
     <!-- video section -->
     <section class="video">
-        <!-- <video></video> -->
-        <iframe width="100%" src="https://www.youtube.com/embed/fE2h3lGlOsk" title="ITZY(있지) 'WANNABE' M/V" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2hIuD0if_JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <div class="infoAndNext">
+    <div class="info-next">
         <!-- video info -->
         <section class="info">
             <div class="information">
                 <ul class="hashtags">
-                    <li>ITZY</li>
-                    <li>ITzME</li>
-                    <li>WANNABE</li>
+                    <li>적재</li>
+                    <li>비플리</li>
+                    <li>비긴어게인모아듣기</li>
                 </ul>
-                <div class="titleBtn">
-                    <span class="title">ITZY(있지) "WANNABE" M/V</span>
-                    <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+                <div class="title-btn">
+                    <span class="title">🎧적재 Playlist🎧 적재와 함께 듀엣 모음 (ft. 솔로곡) | 비긴어게인 모아듣기</span>
+                    <button class="more"><i class="fas fa-caret-down"></i></button>
                 </div>
-                <span class="viewsAndDay">조회수 255,899,304회 • 2020. 3. 9</span>
+                <span class="views-day">조회수 859,797회•2020. 8. 21.</span>
             </div>
             <ul class="btns">
                 <li>
-                    <button><i class="fas fa-thumbs-up thumbs" onclick="thumbsUpDown()"></i>1K</button>
+                    <button><i class="fas fa-thumbs-up" id="thumbsUp" onclick="thumbsUp()"></i>15만</button>
                 </li>
                 <li>
-                    <button><i class="fas fa-thumbs-down fas-thumbs"></i>0</button>
+                    <button id="dontLike"><i class="fas fa-thumbs-down" id="thumbsDown" onclick="thumbsDown()"></i>0</button>
                 </li>
                 <li>
                     <button><i class="fas fa-share"></i>Share</button>
@@ -61,51 +61,51 @@
                 </li>
             </ul> 
             <div class="channel">
-                <div class="channel_data">
-                    <img src="./images/jypEnt.png" alt="채널 프로필사진" />
-                    <div class="channel_info">
-                        <span class="name">JYP Entertainment</span>
-                        <span class="subscribers">19.7M</span>
+                <div class="channel-data">
+                    <img src="./images/beginagain_channel.jpg" alt="채널 프로필사진" />
+                    <div class="channel-info">
+                        <span class="name">Beginagain 비긴어게인</span>
+                        <span class="subscribers">구독자 102만명</span>
                     </div>
                 </div>
-                <button class="subscribe">SUBSCRIBE</button>
+                <button class="subscribe-btn" id="subsBtn" onclick="clickSubscribe()">구독</button>
             </div>
         </section>
 
         <!-- next video list -->
-        <section class="nextVid">
-            <p>Up Next</p>
+        <section class="next-video">
+            <p>다음 동영상</p>
             <ul>
                 <li class="next">
                     <div class="img">
-                        <img src="./images/itzy.jpg" alt="다음 동영상" />
+                        <img src="./images/choiJun.jpg" alt="최준 x 적재-별보러가자 썸네일" />
                     </div>
-                    <div class="listInfo">
-                        <span class="listTitle">ITZY(있지) "WANNABE" M/V</span>
-                        <span class="listName">JYP Entertainment</span>
-                        <span class="views">조회수 1.3천회 • 2주전</span>
-                    </div>
-                    <button><i class="fas fa-ellipsis-v"></i></button>
-                </li>
-                <li class="next">
-                    <div class="img">
-                        <img src="./images/itzy.jpg" alt="다음 동영상" />
-                    </div>
-                    <div class="listInfo">
-                        <span class="listTitle">HTML/CSS 활용해보기 | HTML/CSS을 이용한 간단 프로젝트 만들기 | 개발자 입문</span>
-                        <span class="listName">민송의 코딩일기</span>
-                        <span class="views">조회수 1.3천회 • 8일전</span>
+                    <div class="list-info">
+                        <span class="list-title">[최준의니곡내곡] 별 보러 가자 - 적재x최준 LIVE</span>
+                        <span class="list-name">피식대학Psick Univ</span>
+                        <span class="views">조회수 1.5천회 • 2주전</span>
                     </div>
                     <button><i class="fas fa-ellipsis-v"></i></button>
                 </li>
                 <li class="next">
                     <div class="img">
-                        <img src="./images/itzy.jpg" alt="다음 동영상" />
+                        <img src="./images/coding.jpg" alt="html/css 썸네일" />
                     </div>
-                    <div class="listInfo">
-                        <span class="listTitle">[playList] 코딩할 때 듣기 좋은 노래 | 집중되는 노래 리스트 | 5시간 플레이리스트</span>
-                        <span class="listName">musicIsMyLife</span>
-                        <span class="views">조회수 23만회 • 5일전</span>
+                    <div class="list-info">
+                        <span class="list-title">HTML/CSS 활용해보기 | HTML/CSS을 이용한 간단 프로젝트 만들기 | 개발자 입문</span>
+                        <span class="list-name">민송의 코딩일기</span>
+                        <span class="views">조회수 2.5천회 • 8일전</span>
+                    </div>
+                    <button><i class="fas fa-ellipsis-v"></i></button>
+                </li>
+                <li class="next">
+                    <div class="img">
+                        <img src="./images/bg4.jfif" alt="플레이리스트 썸네일" />
+                    </div>
+                    <div class="list-info">
+                        <span class="list-title">[playList] 코딩할 때 듣기 좋은 노래 | 집중되는 노래 리스트 | 5시간 플레이리스트</span>
+                        <span class="list-name">musicIsMyLife</span>
+                        <span class="views">조회수 2만회 • 5일전</span>
                     </div>
                     <button><i class="fas fa-ellipsis-v"></i></button>
                 </li>
